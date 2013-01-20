@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Digg-Style Radio Select Buttons</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+<!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div id="w">
+		<form name="diggform" id="diggform" method="post" action="index.html">
+			<header id="cathead">
+				<h2>Choose a Topic</h2>
+				<p>Tell us where your submission should be listed. Select a category below which best represents your news.</p>
+			</header>
+			
+			<!-- radio list -->
+			<input type="radio" name="category" value="apple">
+			<input type="radio" name="category" value="design">
+			<input type="radio" name="category" value="gadgets">
+			<input type="radio" name="category" value="hardware">
+			<input type="radio" name="category" value="technews">
+			<input type="radio" name="category" value="linuxunix">
+			<input type="radio" name="category" value="microsoft">
+			<input type="radio" name="category" value="mods">
+			<input type="radio" name="category" value="programming">
+			<input type="radio" name="category" value="security">
+			<input type="radio" name="category" value="businessfinance">
+			<input type="radio" name="category" value="worldnews">
+			<input type="radio" name="category" value="politicalnews">
+			<input type="radio" name="category" value="politicalopinion">
+			<input type="radio" name="category" value="environment">
+			<input type="radio" name="category" value="generalscience">
+			<input type="radio" name="category" value="space">
+			<input type="radio" name="category" value="gamingnews">
+			<input type="radio" name="category" value="pcgames">
+			<input type="radio" name="category" value="webgames">
+			<input type="radio" name="category" value="nintendo">
+			<input type="radio" name="category" value="playstation">
+			<input type="radio" name="category" value="xbox">
+			<input type="radio" name="category" value="artsculture">
+			<input type="radio" name="category" value="auto">
+			<input type="radio" name="category" value="educational">
+			<input type="radio" name="category" value="fooddrink">
+			<input type="radio" name="category" value="health">
+			<input type="radio" name="category" value="travel">
+			<input type="radio" name="category" value="celebrity">
+			<input type="radio" name="category" value="movies">
+			<input type="radio" name="category" value="music">
+			<input type="radio" name="category" value="television">
+			<input type="radio" name="category" value="comicsanimation">
+			<input type="radio" name="category" value="baseball">
+			<input type="radio" name="category" value="basketball">
+			<input type="radio" name="category" value="extreme">
+			<input type="radio" name="category" value="football">
+			<input type="radio" name="category" value="golf">
+			<input type="radio" name="category" value="hockey">
+			<input type="radio" name="category" value="olympics">
+			<input type="radio" name="category" value="soccer">
+			<input type="radio" name="category" value="tennis">
+			<input type="radio" name="category" value="othersports">
+			<input type="radio" name="category" value="comedy">
+			<input type="radio" name="category" value="oddstuff">
+			<input type="radio" name="category" value="people">
+			<input type="radio" name="category" value="petsanimals">
+
+			
+			<section id="catlinks">
+				<div class="row">
+					<h3>Technology</h3>
+					<a href="#" class="c" id="apple">Apple</a>
+					<a href="#" class="c" id="design">Design</a>
+					<a href="#" class="c" id="gadgets">Gadgets</a>
+					<a href="#" class="c" id="hardware">Hardware</a>
+					<a href="#" class="c" id="technews">Industry News</a>
+					<a href="#" class="c" id="linuxunix">Linux/Unix</a>
+					<a href="#" class="c" id="microsoft">Microsoft</a>
+					<a href="#" class="c" id="mods">Mods</a>
+					<a href="#" class="c" id="programming">Programming</a>
+					<a href="#" class="c" id="security">Security</a>
+				</div>
+				
+				<div class="row">
+					<h3>World &amp; Business</h3>
+					<a href="#" class="c" id="businessfinance">Business &amp; Finance</a>
+					<a href="#" class="c" id="worldnews">World News</a>
+					<a href="#" class="c" id="politicalnews">Political News</a>
+					<a href="#" class="c" id="politicalopinion">Political Opinion</a>
+				</div>
+				
+				<div class="row">
+					<h3>Science</h3>
+					<a href="#" class="c" id="environment">Environment</a>
+					<a href="#" class="c" id="generalscience">General Sciences</a>
+					<a href="#" class="c" id="space">Space</a>
+				</div>
+				
+				<div class="row">
+					<h3>Gaming</h3>
+					<a href="#" class="c" id="gamingnews">Industry News</a>
+					<a href="#" class="c" id="pcgames">PC Games</a>
+					<a href="#" class="c" id="webgames">Playable Web Games</a>
+					<a href="#" class="c" id="nintendo">Nintendo</a>
+					<a href="#" class="c" id="playstation">PlayStation</a>
+					<a href="#" class="c" id="xbox">Xbox</a>
+				</div>
+				
+				<div class="row">
+					<h3>Lifestyle</h3>
+					<a href="#" class="c" id="artsculture">Arts &amp; Culture</a>
+					<a href="#" class="c" id="auto">Auto</a>
+					<a href="#" class="c" id="educational">Educational</a>
+					<a href="#" class="c" id="fooddrink">Food &amp; Drink</a>
+					<a href="#" class="c" id="health">Health</a>
+					<a href="#" class="c" id="travel">Travel &amp; Places</a>
+				</div>
+				
+				<div class="row">
+					<h3>Entertainment</h3>
+					<a href="#" class="c" id="celebrity">Celebrity</a>
+					<a href="#" class="c" id="movies">Movies</a>
+					<a href="#" class="c" id="music">Music</a>
+					<a href="#" class="c" id="television">Television</a>
+					<a href="#" class="c" id="comicsanimation">Comics &amp; Animation</a>
+				</div>
+				
+				<div class="row">
+					<h3>Sports</h3>
+					<a href="#" class="c" id="baseball">Baseball</a>
+					<a href="#" class="c" id="basketball">Basketball</a>
+					<a href="#" class="c" id="extreme">Extreme</a>
+					<a href="#" class="c" id="football">Football</a>
+					<a href="#" class="c" id="golf">Golf</a>
+					<a href="#" class="c" id="hockey">Hockey</a>
+					<a href="#" class="c" id="olympics">Olympics</a>
+					<a href="#" class="c" id="soccer">Soccer</a>
+					<a href="#" class="c" id="tennis">Tennis</a>
+					<a href="#" class="c" id="othersports">Other Sports</a>
+				</div>
+				
+				<div class="row">
+					<h3>Offbeat</h3>
+					<a href="#" class="c" id="comedy">Comedy</a>
+					<a href="#" class="c" id="oddstuff">Odd Stuff</a>
+					<a href="#" class="c" id="people">People</a>
+					<a href="#" class="c" id="petsanimals">Pets &amp; Animals</a>
+				</div>
+			</section>
+			
+		</form>
+	</div>
+</body>
+</html>

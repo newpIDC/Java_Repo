@@ -1,0 +1,26 @@
+<!-- Person service  -->
+<!-- 
+<service name="personService" scope="application">
+    <description>Person POJO Service</description>
+      <operation name="sayHello">
+        <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+    </operation>
+    <operation name="ping">
+        <messageReceiver class="org.apache.axis2.receivers.RawXMLINOnlyMessageReceiver"/>
+    </operation>
+    <parameter name="ServiceClass">com.cert.service.PersonService</parameter>
+</service>
+ -->
+ 
+
+	<service name="MyService">
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+		</messageReceivers>
+		<parameter name="ServiceClass" locked="false">
+			com.cert.service.MyService
+		</parameter>
+	</service>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.1.xsd">
+ 
+	<import resource="MEMORY-JOBREPOSITORY.xml"/>    
+    
+    <import resource="ApplicationDB.xml"/> 
+ 
+	<bean name="readFromDB" id="readFromDB" class="org.springframework.batch.item.database.JdbcCursorItemReader" scope="step">
+		<property name="dataSource" ref="test-dataSource" />
+		<property name="sql" value="#{jobParameters['query']}"/>
+		<property name="rowMapper">
+			<bean  name="mapper" id="mapper" class="com.wellsfargo.lbs.tmplegacyadapterjob.batch.ResponseRowMapper" />
+		</property>
+	</bean>	
+ 
+	<!--<bean id="productResponseProcessor" class="com.wellsfargo.lbs.tmplegacyadapterjob.batch.ProductResponseProcessor" />
+	
+	<bean id="productResponseFileListener" class="com.wellsfargo.lbs.tmplegacyadapterjob.batch.Listener.ProductResponseListener"/>
+	
+	--><!-- 
+	<bean id="responseFileItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
+		<property name="resource" value="file:H:\\data\\output\\#{jobParameters['file']}"/> 
+		<property name="shouldDeleteIfExists" value="true"/>
+		<property name="lineAggregator">
+			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+				<property name="delimiter" value=""/>
+				<property name="fieldExtractor">
+					<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+						<property name="names" value="productResponseId,response"/>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>	
+ 	-->
+ 	
+ 	<bean id="transFormINTOSoap" class="com.wellsfargo.lbs.tmplegacyadapterjob.batch.ProductResponseProcessor" />
+ 	
+ 	<bean id="writeTOService" class="com.cert.dao.ToServiceWriter" />
+ 	
+ 	<batch:job id="productResponseToFileJob" job-repository="jobRepository">
+		<batch:step id="step1"> 
+			<batch:tasklet transaction-manager="jobRepository-transactionManager" >
+				<batch:chunk reader="readFromDB"  processor="transFormINTOSoap" writer="writeTOService" commit-interval="200" /> 
+			</batch:tasklet>
+		</batch:step>
+		<!-- 
+		<batch:listeners>
+            <batch:listener ref="productResponseFileListener"/>
+        </batch:listeners>
+         -->
+	</batch:job>
+	
+</beans>

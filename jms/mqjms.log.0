@@ -1,0 +1,87 @@
+1. Delete All
+2. Copy All
+3. Health Check
+
+
+
+
+
+
+
+
+
+
+
+
+January 12, 2013 10:39:18 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 10:40:57 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 10:41:42 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 11:04:49 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 11:06:17 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 11:11:04 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 11:11:24 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------
+January 12, 2013 11:11:49 PM IST[main] com.ibm.msg.client.jms.internal.JmsQueueConnectionImpl
+Calling receive will not return a message for a connection that is stopped.
+
+EXPLANATION:
+The JMS specification says that calling the receive() method must not return a message if the connection is stopped. Calling receiveNoWait or receive with a timeout will return null when the timeout expires. Calling receive with no timeout will not return until the connection is started or closed or the application terminates.
+
+ACTION:
+Start the connection by calling javax.jms.Connection.start(). 
+--------------------------------------------------------------------

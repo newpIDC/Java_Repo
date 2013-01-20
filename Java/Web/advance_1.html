@@ -1,0 +1,172 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<script type="text/javascript">
+		
+		function AssertException(message) { this.message = message; }
+			AssertException.prototype.toString = function () {
+			return 'AssertException: ' + this.message;
+		}
+
+		function assert(exp, message) {
+			if (!exp) {
+				throw new AssertException("Exection occurred.");
+			}else{
+				console.log(message);
+			}
+		}
+	
+		 /*
+		 var canFly = function() { return true; };
+		 window.isDeadly = function(){ return true; };
+		 //console.log(isNimble, canFly);
+		 document.write(isNimble, canFly, isDeadly);
+		 assert( isNimble() && canFly() && isDeadly(), "Still works, even though isNimble is moved." ); 
+		 function isNimble(){ return true; };
+		
+		 
+		function yell(n){ 
+			return n > 0 ? yell(n-1) + "a" : "hiy"; 
+		} 
+		
+		
+		assert( yell(4) == "hiyaaaa", "Calling the function by itself comes naturally." );
+		 */
+	
+		/*
+		function isPrime( num ) { 
+			if ( isPrime.cache[ num ] != null ) 
+			return isPrime.cache[ num ]; 
+   
+			var prime = num != 1; // Everything but 1 can be prime 
+			for ( var i = 2; i < num; i++ ) { 
+			if ( num % i == 0 ) { 
+				prime = false; 
+				break; 
+			} 
+		} 
+  
+		isPrime.cache[ num ] = prime 
+  
+		return prime; 
+		} 
+ 
+		isPrime.cache = {}; 
+			
+		assert( isPrime(5), "Make sure the function works, 5 is prime." ); 
+		assert( isPrime.cache[5], "Make sure the answer is cached." );
+		console.trace()
+		 */
+		 
+		 /*
+		 var ob = {
+		 add : function add(a, b){ 
+			console.log("a + b =" +a + b);
+			return a + b;
+			
+ 
+		} 
+		}
+		assert( ob.add.call(this, 1, 2) == 3, ".call() takes individual arguments" ); 
+		assert( ob.add.apply(ob, [1, 2]) == 3, ".apply() takes an array of arguments" );
+		*/
+		
+		/*
+		function loop(array, fn){
+			for ( var i = 0; i < array.length; i++ )
+				fn.call( array, array[i], i );
+		}
+		
+		var num = 0;		
+		loop([0, 1, 2], function(value, i){
+		assert(value == num++, "Make sure the contents are as we expect it.");
+		assert(this instanceof Array, "The context should be the full array.");
+		*/
+		/*
+		function User(first, last){
+			this.name = first + " " + last;
+		}
+
+		window.name = "Resig";
+		var user = new User("John", name);
+
+		assert( name == "John Resig", "The name variable is accidentally overridden." );
+		*/
+		
+		/*
+		function User(first, last){ 
+			if ( !(this instanceof User) ) 
+				return new User(first, last); 
+   
+				this.name = first + " " + last; 
+		} 
+ 
+		var name = "Resig"; 
+		var user = User("John", name); 
+ 
+		assert( user, "This was defined correctly, even if it was by mistake." ); 
+		assert( name == "Resig", "The right name was maintained." );
+		*/
+		
+		/*
+		function User(first, last){ 
+			if ( !(this instanceof arguments.callee) ) 
+			return new User(first, last); 
+   
+			this.name = first + " " + last; 
+		} 
+ 
+		var name = "Resig"; 
+		var user = User("John", name); 
+ 
+		assert( user, "This was defined correctly, even if it was by mistake." ); 
+		assert( name == "Resig", "The right name was maintained." );
+		*/
+		
+		/*
+		var num = 10;
+
+		function addNum(myNum){
+				alert(num + myNum);
+				return num + myNum;
+		}	
+
+		num = 15;
+
+		assert( addNum(5) == 15, "Add two numbers together, one from a closure." );
+		*/
+		
+		/*
+		(function(){ 
+			var count = 0; 
+ 
+			var timer = setInterval(function(){ 
+			if ( count < 5 ) { 
+				console.log( "Timer call: ", count ); 
+				count++; 
+			} else { 
+			
+			assert( count == 5, "Count came via a closure, accessed each step." ); 
+			assert( timer, "The timer reference is also via a closure." ); 
+			clearInterval( timer ); 
+		} 
+		}, 100); 
+		}
+	)(); 
+ 
+		assert( typeof count == "undefined", "count doesn't exist outside the wrapper" ); 
+		assert( typeof timer == "undefined", "neither does timer" );
+		*/
+		
+		for ( var d = 0; d < 3; d++ ) (function(d){ 
+			setTimeout(function(){ 
+				console.log( "Value of d: ", d ); 
+				assert( d == d, "Check the value of d." ); 
+			}, d * 500); 
+		})(d);
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.persistence.PersonMapper">
+
+  <cache />
+  <insert id="insertPerson" parameterType="Person">   
+    INSERT INTO PERSON
+      (person_id, first_name, last_name, created_date)
+    VALUES
+      ( #{personid}, #{fName},#{lName},#{createddate} )
+  </insert>
+ 
+ <delete id="deleteAll">
+ 	DELETE FROM PERSON
+ </delete>   
+ 
+ <select id="selectonDate" parameterType="Date" resultType="Person">
+ 	SELECT 
+ 		 person_id as personid,
+ 		 first_name as fName, 
+ 		 last_name as lName,
+ 		 created_date as createddate
+ 	FROM person
+ 	where created_date &lt;= #{value}
+ 	
+ </select>
+</mapper>
+  

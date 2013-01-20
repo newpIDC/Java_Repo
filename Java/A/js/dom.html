@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Style Example</title>
+<script type="text/javascript">
+function sayStyle() {
+var oDiv = document.getElementById("div1");
+alert(oDiv.style.height);
+}
+</script>
+</head>
+	<body>
+		<div id="div1" style="background-color: red; height: 50px; width:50px"></div>
+		<input type="button" style="onmouseover="this.style.backgroundColor = 'blue'"
+							onmouseout="this.style.backgroundColor = 'red'" 
+		value="Get Background Color" onclick="sayStyle()" />
+	</body>
+</html>

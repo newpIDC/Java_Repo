@@ -1,0 +1,59 @@
+<html>
+<head>
+	<script>
+		//var abhay = 1;
+		//alert("'" + abhay + "'");
+	</script>
+</head>
+<body>
+	<form id="myForm" >
+	</form>
+</body>
+	<script>
+		alert("<name> abhay </name>");
+		var btn = document.createElement("BUTTON");
+		var txt =document.createTextNode("CLICK ME");
+		btn.appendChild(txt);
+		var form = document.getElementById("myForm");
+		form.appendChild(btn);
+	
+		var div = document.createElement("DIV");
+		form.appendChild(div);
+		div.innerHTML = "<input type='text'/>";
+		
+		var div2 = document.createElement("DIV");
+		form.appendChild(div2);
+		div2.innerHTML = "<name> abhay </name>";
+		
+		
+		var div3 = document.createElement("DIV");
+		form.appendChild(div3);
+		if(div3.textContent) {		
+			div3.textContent = "<name> abhay </name>";
+		}
+		
+		
+		class Greeter {
+	greeting: string;
+	constructor (message: string) {
+		this.greeting = message;
+	}
+	greet() {
+		return "Hello, " + this.greeting;
+	}
+}   
+
+var greeter = new Greeter("world");
+
+var button = document.createElement('button')
+button.innerText = "Say Hello"
+button.onclick = function() {
+	alert(greeter.greet())
+}
+
+document.body.appendChild(button)
+
+		
+	</script>
+	
+</html>

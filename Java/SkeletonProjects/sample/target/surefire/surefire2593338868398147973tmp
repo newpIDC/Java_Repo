@@ -1,0 +1,37 @@
+#surefire
+#Sat Apr 14 03:04:50 IST 2012
+testClassesDirectory=C\:\\User_Project\\SkeletonProjects\\sample\\target\\test-classes
+classPathUrl.4=C\:\\Documents and Settings\\abhay\\.m2\\repository\\antlr\\antlr\\2.7.2\\antlr-2.7.2.jar
+classPathUrl.3=C\:\\Documents and Settings\\abhay\\.m2\\repository\\org\\apache\\struts\\struts-core\\1.3.10\\struts-core-1.3.10.jar
+classPathUrl.2=C\:\\Documents and Settings\\abhay\\.m2\\repository\\junit\\junit\\3.8.1\\junit-3.8.1.jar
+useManifestOnlyJar=true
+classPathUrl.1=C\:\\User_Project\\SkeletonProjects\\sample\\target\\classes
+reportsDirectory=C\:\\User_Project\\SkeletonProjects\\sample\\target\\surefire-reports
+classPathUrl.0=C\:\\User_Project\\SkeletonProjects\\sample\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=C\:\\User_Project\\SkeletonProjects\\sample\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Documents and Settings\\abhay\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.7.1\\surefire-api-2.7.1.jar
+surefireClassPathUrl.0=C\:\\Documents and Settings\\abhay\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.7.1\\surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=C\:\\User_Project\\SkeletonProjects\\sample\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+classPathUrl.12=C\:\\Documents and Settings\\abhay\\.m2\\repository\\javax\\servlet\\servlet-api\\2.3\\servlet-api-2.3.jar
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+classPathUrl.11=C\:\\Documents and Settings\\abhay\\.m2\\repository\\org\\apache\\struts\\struts-taglib\\1.3.10\\struts-taglib-1.3.10.jar
+classPathUrl.10=C\:\\Documents and Settings\\abhay\\.m2\\repository\\oro\\oro\\2.0.8\\oro-2.0.8.jar
+classPathUrl.9=C\:\\Documents and Settings\\abhay\\.m2\\repository\\commons-validator\\commons-validator\\1.3.1\\commons-validator-1.3.1.jar
+classPathUrl.8=C\:\\Documents and Settings\\abhay\\.m2\\repository\\commons-logging\\commons-logging\\1.0.4\\commons-logging-1.0.4.jar
+classPathUrl.7=C\:\\Documents and Settings\\abhay\\.m2\\repository\\commons-digester\\commons-digester\\1.8\\commons-digester-1.8.jar
+childDelegation=false
+classPathUrl.6=C\:\\Documents and Settings\\abhay\\.m2\\repository\\commons-chain\\commons-chain\\1.2\\commons-chain-1.2.jar
+classPathUrl.5=C\:\\Documents and Settings\\abhay\\.m2\\repository\\commons-beanutils\\commons-beanutils\\1.8.0\\commons-beanutils-1.8.0.jar
